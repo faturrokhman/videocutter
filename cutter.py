@@ -6,10 +6,10 @@ print("""<html><head><meta charset="UTF-8">
 <meta name="keywords" content="Whatsapp, instagram, cutter, video, status, stories, trim">
 <meta name="author" content="Kishor. A">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
-<link rel="stylesheet" href="dark-mode.css">
+<link rel="stylesheet" href="darkmode/dark-mode.css">
 <title>Status Cutter</title>
 </head><body><div class="container-fluid">
-        <div class="row bg-dark p-4">
+        <div class="topbar row bg-dark p-4">
             <div class="col-6 col-sm-6 col-lg-7 text-left font-weight-bold text-white align-self-center">
                 <h1 style="font-size: 2.5rem;"> STATUS CUTTER</h1>
             </div>
@@ -18,7 +18,7 @@ print("""<html><head><meta charset="UTF-8">
                   <input type="checkbox" class="custom-control-input" id="darkSwitch">
                   <label class="custom-control-label text-white " for="darkSwitch">Dark Mode</label>
                 </div>
-                <script src="dark-mode-switch.min.js"></script>
+                <script src="darkmode/dark-mode-switch.min.js"></script>
             </div>
             <div class="col-3 col-sm-3 col-lg-1 text-center font-weight-bold text-white align-self-center">
                 <button type="button" class="btn btn-light text-center btn-outline-light"><a href="https://github.com/k1sh0r/StatusCutter"><img src="git1.png" alt="GitHub" style="width:2rem;" ></a></button>
