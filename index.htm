@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimalistic way to cut your long videos into 15 seconds segments for whatsapp and instagram in windows, instead of cutting it manually.">
+    <meta name="keywords" content="Whatsapp, instagram, cutter, video, status, stories, trim">
+    <meta name="author" content="Kishor. A">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Status Cutter</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="row bg-dark p-4">
+            <div class="col-6 col-sm-6 col-lg-7 text-left font-weight-bold text-white align-self-center">
+                <h1 style="font-size: 2.5rem;"> STATUS CUTTER</h1>
+            </div>
+            <div class="nav-link align-self-center">
+                <div class="dm custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                  <label class="custom-control-label text-white " for="darkSwitch">Dark Mode</label>
+                </div>
+                <script src="dark-mode-switch.min.js"></script>
+            </div>
+            <div class="col-3 col-sm-3 col-lg-1 text-center font-weight-bold text-white align-self-center">
+                <button type="button" class="btn btn-light text-center btn-outline-light"><a href="https://github.com/k1sh0r/StatusCutter"><img src="git1.png" alt="GitHub" style="width:2rem;" ></a></button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h6 class="pl-3 pr-3">Cut your long videos into 15 seconds segments for whatsapp and instagram online, instead of cutting it manually.</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <form action="cutter.py" enctype="multipart/form-data" method="post">
+                    <div class="input-group mb-3">
+
+                        <div class="custom-file">
+
+                            <input type="file" name="filename" class="btn btn-dark custom-file-input " id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label border border-dark " for="inputGroupFile01">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button onclick="loader()" type="submit" class="btn btn-dark" id="inputGroupFileAddon01">Cut for status</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row">
+
+            <div class="col-lg-12 text-center" style="display: none; margin-top: -30px; margin-bottom: -30px" id="loading">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+                </script>
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_78Ybeg.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin-left: auto;margin-right: auto"  loop  autoplay>
+                </lottie-player>
+            </div>
+
+            <div class="col-lg-12 col-sm-12 text-center" style="display: none;" id="uploading">
+                <h5 style="margin-left: auto;margin-right: auto">Uploading... please wait!</h5>
+            </div>
+
+            <div style="display: none;" class="col-lg-12 col-sm-12 text-center mt-5" id="howto">
+                <h5>How to</h5>  
+                <p class="pl-3 pr-3">
+                    Choose the file and upload. It may take longer if file size is larger.<br>
+                </p>   
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+function loader() {
+
+  //$("#howto").fadeOut();
+    //setTimeout(function() {
+        $("#loading").fadeIn();
+    //}, 1000);
+    setTimeout(function() {$("#uploading").fadeIn();}, 3500);
+}
+
+
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
+</script>
+
+</html>
